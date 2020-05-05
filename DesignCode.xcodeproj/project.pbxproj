@@ -14,6 +14,7 @@
 		902570C4244C572200B9A5F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 902570C3244C572200B9A5F7 /* Preview Assets.xcassets */; };
 		902570C7244C572200B9A5F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 902570C5244C572200B9A5F7 /* LaunchScreen.storyboard */; };
 		904C389A2461694300894980 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C38992461694300894980 /* Home.swift */; };
+		904C389C24619F9000894980 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904C389B24619F9000894980 /* HomeList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		902570C6244C572200B9A5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		902570C8244C572200B9A5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		904C38992461694300894980 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		904C389B24619F9000894980 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				902570BC244C571F00B9A5F7 /* SceneDelegate.swift */,
 				902570BE244C571F00B9A5F7 /* ContentView.swift */,
 				904C38992461694300894980 /* Home.swift */,
+				904C389B24619F9000894980 /* HomeList.swift */,
 				902570C0244C572200B9A5F7 /* Assets.xcassets */,
 				902570C5244C572200B9A5F7 /* LaunchScreen.storyboard */,
 				902570C8244C572200B9A5F7 /* Info.plist */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				902570BB244C571F00B9A5F7 /* AppDelegate.swift in Sources */,
+				904C389C24619F9000894980 /* HomeList.swift in Sources */,
 				902570BD244C571F00B9A5F7 /* SceneDelegate.swift in Sources */,
 				904C389A2461694300894980 /* Home.swift in Sources */,
 				902570BF244C571F00B9A5F7 /* ContentView.swift in Sources */,
