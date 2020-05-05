@@ -10,24 +10,17 @@ import SwiftUI
 
 struct Home: View {
     var menu = menuData
+    @State var show = false
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20.0) {
-            
-            ForEach(menu) {item in
-                MenuRow(image: item.icon, text: item.title)
+        ZStack {
+            Button(action: {self.show.toggle()}) {
+            Text("Open Menu")
             }
-
-
-            Spacer()
+            
+//the $ means that it is going to listen to the changes and it is going to synchronize
+            MenuView(show: $show)
         }
-        .padding(.top, 30)
-        .padding(30)
-        .frame(minWidth: 0, maxWidth: .infinity)
-        .background(Color.white)
-        .cornerRadius(30)
-        .padding(.trailing, 60)
-        .shadow(radius: 20)
     }
 }
 
@@ -68,3 +61,34 @@ let menuData = [
     Menu(id: "signOut", title: "Sign out", icon: "arrow.uturn.down")
 ]
 
+
+struct MenuView: View {
+     var menu = menuData
+//this binding means that the component is going to listen to the state from the parent component
+    @Binding var show : Bool
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 20.0) {
+            
+            ForEach(menu) {item in
+                MenuRow(image: item.icon, text: item.title)
+            }
+            
+            
+            Spacer()
+        }
+        .padding(.top, 30)
+        .padding(30)
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .background(Color.white)
+        .cornerRadius(30)
+        .padding(.trailing, 60)
+        .shadow(radius: 20)
+        .rotation3DEffect(Angle(degrees: show ? 0 : 60), axis: (x: 0, y: 10.0, z: 0))
+        .animation(.default)
+        .offset(x: show ? 0 : -UIScreen.main.bounds.width)
+        .onTapGesture {
+            self.show.toggle()
+        }
+    }
+}
