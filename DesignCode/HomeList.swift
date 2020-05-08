@@ -13,7 +13,22 @@ struct HomeList: View {
      @State var showContent = false
      
 
-        var body: some View {
+    var body: some View {
+        VStack {
+            // can use an Hstack to set a spacer so the text is not centered
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Courses")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                    Text("22 courses")
+                        .foregroundColor(.gray)
+                }
+                Spacer()
+            }
+            .padding(.leading, 70.0)
+            .padding(.bottom, 40)
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 30) {
                     ForEach(courses) { item in
@@ -28,11 +43,14 @@ struct HomeList: View {
                         }
                     }
                 }
-                .padding(.leading, 30)
+                .padding(.leading, 40)
+                
                 
                 Spacer()
             }
         }
+        .padding(.top, 78.0)
+    }
     }
 
 struct HomeList_Previews: PreviewProvider {
@@ -53,7 +71,7 @@ struct CourseView : View {
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
-                .padding(20)
+                .padding(30)
                 .lineLimit(4)
                 .padding(.trailing, 50)
             Spacer()

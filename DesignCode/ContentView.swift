@@ -14,6 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
+            BlurView(style: .extraLight)
             
             TitleVIew()
                 .blur(radius: show ? 20 : 0)
@@ -123,7 +124,7 @@ struct TitleVIew: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Certificate")
+                Text("Certificates")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                 Spacer()
